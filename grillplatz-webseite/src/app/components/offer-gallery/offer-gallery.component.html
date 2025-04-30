@@ -1,0 +1,18 @@
+<p-carousel
+  [value]="offers"
+  [numVisible]="1"
+  [numScroll]="1"
+  [circular]="true"
+  [autoplayInterval]="0"
+  [showIndicators]="false"
+  [showNavigators]="true"
+  styleClass="focus-carousel"
+>
+  <ng-template let-offer pTemplate="item">
+    <div class="carousel-item">
+      <img [src]="offer.imageUrl" [alt]="offer.title" />
+      <h3>{{ offer.title }}</h3>
+      <button pButton label="Zum Angebot" class="p-button-success"></button>
+    </div>
+  </ng-template>
+</p-carousel>
