@@ -11,12 +11,14 @@ import { CommonModule } from '@angular/common';
   styleUrls: ['./offer-gallery.component.css']
 })
 export class OfferGalleryComponent {
+  activeIndex: number = 0;
+
   offers = [
-    { id: '1', title: 'Musikanlage', imageUrl: 'assets/musikanlage.jpg' },
-    { id: '2', title: 'Sportbox', imageUrl: 'assets/sportbox.jpg' },
-    { id: '3', title: 'Dartscheibe', imageUrl: 'assets/dartscheibe.jpg' },
-    { id: '4', title: 'Tischkicker', imageUrl: 'assets/tischkicker.jpg' },
-    { id: '5', title: 'Tischtennisplatte', imageUrl: 'assets/tischtennis.jpg' },
-    { id: '6', title: 'Lichter / LED', imageUrl: 'assets/lichter.jpg' }
+    { id: '1', title: 'Musikanlage', imageUrl: '/assets/musikanlage.jpg' },
+    { id: '2', title: 'Sportbox', imageUrl: '/assets/sportbox.jpg' },
+    { id: '3', title: 'Dartscheibe', imageUrl: '/assets/dartscheibe.jpg' },
+    { id: '4', title: 'Tischkicker', imageUrl: '/assets/tischkicker.jpg' },
+    { id: '5', title: 'Tischtennisplatte', imageUrl: '/assets/tischtennis.jpg' },
+    { id: '6', title: 'Lichter / LED', imageUrl: '/assets/lichter.jpg' }
   ];
 }

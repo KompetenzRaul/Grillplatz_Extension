@@ -1,13 +1,22 @@
-.focus-carousel .p-carousel-content {
+:host {
     display: flex;
     justify-content: center;
-    align-items: center;
-    padding: 2rem 0;
+    padding: 2rem;
+  }
+  
+  .p-carousel {
+    max-width: 600px;
+    width: 100%;
+  }
+  
+  .p-carousel .p-carousel-content {
+    justify-content: center;
   }
   
   .carousel-item {
     width: 100%;
     max-width: 400px;
+    margin: auto;
     text-align: center;
     background: #1e1e1e;
     padding: 1rem;
@@ -27,5 +36,13 @@
   .carousel-item h3 {
     color: white;
     margin-bottom: 1rem;
+  }
+  
+  .carousel-item {
+    transform: scale(1);
+  }
+  .p-carousel-item.p-carousel-item-active .carousel-item {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px #00ffcc44;
   }
   
