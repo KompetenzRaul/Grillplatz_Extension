@@ -16,9 +16,9 @@ export class OfferGalleryComponent {
   offers = [
     { id: '1', title: 'Musikanlage', imageUrl: '/assets/musikanlage.jpg', price: 60 },
     { id: '2', title: 'Sportbox', imageUrl: '/assets/sportbox.jpg', price: 20 },
-    { id: '3', title: 'Dartscheibe', imageUrl: '/assets/dartscheibe.jpg', price: 15 },
-    { id: '4', title: 'Tischkicker', imageUrl: '/assets/tischkicker.jpg', price: 20 },
-    { id: '5', title: 'Tischtennisplatte', imageUrl: '/assets/tischtennis.jpg', price: 20 },
+    { id: '3', title: 'Riesen-Jenga', imageUrl: '/assets/riesen_jenga.jpg', price: 15 },
+    { id: '4', title: 'Darts', imageUrl: '/assets/dartscheibe.jpg', price: 20 },
+    { id: '5', title: 'Lichter', imageUrl: '/assets/lichter.jpg', price: 20 },
   ];
 
   onSlideChange(event: any) {
