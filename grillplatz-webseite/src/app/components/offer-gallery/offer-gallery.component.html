@@ -3,18 +3,22 @@
   [numVisible]="3"
   [numScroll]="1"
   [circular]="true"
-  [autoplayInterval]="0"
   [showIndicators]="true"
   [showNavigators]="true"
+  (onPage)="onSlideChange($event)"
   styleClass="custom-carousel"
 >
-  <ng-template let-offer let-active="activeIndex" let-index="index" pTemplate="item">
+  <ng-template let-offer let-index="index" pTemplate="item">
     <div
       class="carousel-item"
-      [class.active]="index === active"
-      [class.left]="index === (active - 1 + offers.length) % offers.length"
-      [class.right]="index === (active + 1) % offers.length"
-      [class.dimmed]="index !== active && index !== (active - 1 + offers.length) % offers.length && index !== (active + 1) % offers.length"
+      [class.active]="index === activeIndex"
+      [class.left]="index === (activeIndex - 1 + offers.length) % offers.length"
+      [class.right]="index === (activeIndex + 1) % offers.length"
+      [class.dimmed]="
+        index !== activeIndex &&
+        index !== (activeIndex - 1 + offers.length) % offers.length &&
+        index !== (activeIndex + 1) % offers.length
+      "
     >
       <img [src]="offer.imageUrl" [alt]="offer.title" />
       <h3>{{ offer.title }}</h3>
