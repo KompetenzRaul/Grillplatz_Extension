@@ -4,7 +4,7 @@
   [numScroll]="1"
   [circular]="true"
   [autoplayInterval]="0"
-  [showIndicators]="false"
+  [showIndicators]="true"
   [showNavigators]="true"
   styleClass="custom-carousel"
 >
@@ -12,11 +12,16 @@
     <div
       class="carousel-item"
       [class.active]="index === active"
-      [class.dimmed]="index !== active"
+      [class.left]="index === (active - 1 + offers.length) % offers.length"
+      [class.right]="index === (active + 1) % offers.length"
+      [class.dimmed]="index !== active && index !== (active - 1 + offers.length) % offers.length && index !== (active + 1) % offers.length"
     >
       <img [src]="offer.imageUrl" [alt]="offer.title" />
       <h3>{{ offer.title }}</h3>
-      <button pButton label="Zum Angebot" class="p-button-success"></button>
+      <div class="card-footer">
+        <span class="price">{{ offer.price }} €</span>
+        <button pButton label="Zum Angebot" class="p-button-success"></button>
+      </div>
     </div>
   </ng-template>
 </p-carousel>
