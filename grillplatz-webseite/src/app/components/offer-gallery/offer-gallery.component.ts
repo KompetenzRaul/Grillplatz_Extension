@@ -19,7 +19,6 @@ export class OfferGalleryComponent {
     { id: '3', title: 'Dartscheibe', imageUrl: '/assets/dartscheibe.jpg', price: 15 },
     { id: '4', title: 'Tischkicker', imageUrl: '/assets/tischkicker.jpg', price: 20 },
     { id: '5', title: 'Tischtennisplatte', imageUrl: '/assets/tischtennis.jpg', price: 20 },
-    { id: '6', title: 'Lichter / LED', imageUrl: '/assets/lichter.jpg', price: 10 }
   ];
 
   onSlideChange(event: any) {

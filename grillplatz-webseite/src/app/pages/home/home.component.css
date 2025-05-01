@@ -7,20 +7,24 @@
 .intro-text {
   text-align: center;
   margin-bottom: 2rem;
+  margin: center;
 }
 
 .intro-text h1 {
   font-size: 2rem;
   margin-bottom: 0.5rem;
   color: #e53935;
+  text-align: center;
 }
 
 .intro-text p {
-  font-size: 1.1rem;
+  font-size: 1.3rem;
+  font-weight: 450;
   line-height: 1.6;
   color: #444;
   max-width: 800px;
   margin: 0 auto;
+  text-align:inherit;
 }
 
 .section-title {
@@ -41,3 +45,53 @@
   transform: scale(0.8);
   transform-origin: center;
 }
+
+.footer {
+  background-color: #f0f0f0;
+  padding: 1.5rem 1rem;
+  margin-top: 5rem;
+  border-top: 1px solid #ddd;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.footer-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.footer-logo {
+  height: 60px;
+  margin-bottom: 0.25rem;
+}
+
+.footer-links {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: #e53935;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.footer-separator {
+  color: #aaa;
+}
+
