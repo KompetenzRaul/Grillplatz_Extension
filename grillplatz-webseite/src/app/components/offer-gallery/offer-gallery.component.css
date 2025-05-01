@@ -41,21 +41,6 @@
   transform: scale(0.9);
 }
 
-/* Linke & rechte Nachbarn leicht sichtbar */
-.carousel-item.left,
-.carousel-item.right {
-  opacity: 0.7;
-  filter: blur(0.5px);
-}
-
-/* Aktives Slide */
-.carousel-item.active {
-  transform: scale(1);
-  opacity: 1;
-  filter: none;
-  z-index: 2;
-}
-
 /* Bild */
 .carousel-item img {
   width: 100%;
