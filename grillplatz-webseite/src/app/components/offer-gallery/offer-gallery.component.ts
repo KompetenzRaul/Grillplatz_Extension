@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, AfterViewInit, ChangeDetectorRef } from '@angular/core';
 import { CarouselModule } from 'primeng/carousel';
 import { ButtonModule } from 'primeng/button';
 import { CommonModule } from '@angular/common';
@@ -11,7 +11,7 @@ import { RouterModule } from '@angular/router';
   templateUrl: './offer-gallery.component.html',
   styleUrls: ['./offer-gallery.component.css']
 })
-export class OfferGalleryComponent {
+export class OfferGalleryComponent implements AfterViewInit {
   activeIndex: number = 0;
 
   offers = [
@@ -21,7 +21,6 @@ export class OfferGalleryComponent {
     { id: 'riesen-jenga', title: 'Riesen-Jenga', imageUrl: '/assets/riesen_jenga.jpg', price: 10 },
     { id: 'darts', title: 'Darts', imageUrl: '/assets/dartscheibe.jpg', price: 20 },
     { id: 'lichter', title: 'Lichter', imageUrl: '/assets/lichter.jpg', price: 20 },
-    
     {
       id: 'paket-sport',
       title: '🏀 Sportpaket',
@@ -44,6 +43,13 @@ export class OfferGalleryComponent {
       description: 'Alle verfügbaren Extras in einem Rundum-sorglos-Paket!',
     }
   ];
+
+  constructor(private cdRef: ChangeDetectorRef) {}
+
+  ngAfterViewInit() {
+    // Erzwingt ein erneutes Rendering nach dem Laden der View
+    this.cdRef.detectChanges();
+  }
 
   onSlideChange(event: any) {
     this.activeIndex = event.page;

@@ -82,4 +82,13 @@
       <button type="submit" class="senden-button">Anfrage senden</button>
     </form>
   </div>
+
+  <div *ngIf="showSuccessPopup" class="success-popup">
+    <div class="popup-content">
+      <div class="checkmark">✔</div>
+      <p [innerHTML]="successMessage"></p>
+
+    </div>
+  </div>
+  
   
