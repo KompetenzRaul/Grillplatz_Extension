@@ -74,3 +74,20 @@ a.active {
   font-weight: bold;
   color: #e53935;
 }
+.heart-icon {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  top: 7px;
+  margin-right: 0.3rem;
+}
+
+
+.heart-icon svg {
+  width: 26px;
+  height: 26px;
+  stroke: #e53935;
+  stroke-width: 2;
+  fill: none;
+}
+

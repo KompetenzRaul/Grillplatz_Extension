@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { OfferGalleryComponent } from '@app/components/offer-gallery/offer-gallery.component';
+import { OfferGalleryComponent } from 'src/app/components/offer-gallery/offer-gallery.component';
+
 
 @Component({
   selector: 'app-angebote',
