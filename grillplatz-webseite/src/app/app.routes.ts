@@ -14,7 +14,7 @@ export const routes: Routes = [
   { path: 'kontakt', component: KontaktComponent },
   { path: 'impressum', component: ImpressumComponent },
   { path: 'datenschutz', component: DatenschutzComponent },
-  {path : 'produkte/:id', component: ProduktDetailComponent},
+  {path : 'produkte/:id', component: ProduktDetailComponent, data: { renderMode: 'client' } },
   {path : 'anfrage', component: AuswahlComponent},
 
 ];
