@@ -1,0 +1,39 @@
+<div class="detail-wrapper" *ngIf="produkt">
+  <h2>{{ produkt.title }}</h2>
+
+  <img [src]="produkt.imageUrl" [alt]="produkt.title" />
+
+  <div class="preis-block">{{ produkt.price }} €</div>
+
+  <p class="beschreibung">{{ produkt.description }}</p>
+
+  <div *ngIf="produkt.items" class="inhalt-bereich">
+    <strong>Inhalt:</strong>
+    <ul class="produkt-liste">
+      <li *ngFor="let item of produkt.items">{{ item }}</li>
+    </ul>
+  </div>
+
+  <div *ngIf="produkt.services" class="service-bereich">
+    <strong>Inkludierte Dienstleistungen:</strong>
+    <ul class="service-liste">
+      <li *ngFor="let service of produkt.services">{{ service }}</li>
+    </ul>
+  </div>
+  
+  
+
+  <a routerLink="/angebote" class="back-button">Zurück zur Übersicht</a>
+
+  <button
+  (click)="toggleAuswahl()"
+  class="auswahl-button"
+  [class.ausgewaehlt]="istAusgewaehlt"
+>
+  <span *ngIf="istAusgewaehlt">✔ Ausgewählt</span>
+  <span *ngIf="!istAusgewaehlt">+ Zur Auswahl hinzufügen</span>
+
+</button>
+
+  
+</div>

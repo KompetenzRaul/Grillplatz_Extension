@@ -2,11 +2,12 @@ import { Component } from '@angular/core';
 import { CarouselModule } from 'primeng/carousel';
 import { ButtonModule } from 'primeng/button';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-offer-gallery',
   standalone: true,
-  imports: [CommonModule, CarouselModule, ButtonModule],
+  imports: [CommonModule, CarouselModule, ButtonModule, RouterModule],
   templateUrl: './offer-gallery.component.html',
   styleUrls: ['./offer-gallery.component.css']
 })
@@ -14,11 +15,34 @@ export class OfferGalleryComponent {
   activeIndex: number = 0;
 
   offers = [
-    { id: '1', title: 'Musikanlage', imageUrl: '/assets/musikanlage.jpg', price: 60 },
-    { id: '2', title: 'Sportbox', imageUrl: '/assets/sportbox.jpg', price: 20 },
-    { id: '3', title: 'Riesen-Jenga', imageUrl: '/assets/riesen_jenga.jpg', price: 15 },
-    { id: '4', title: 'Darts', imageUrl: '/assets/dartscheibe.jpg', price: 20 },
-    { id: '5', title: 'Lichter', imageUrl: '/assets/lichter.jpg', price: 20 },
+    { id: 'musikanlage', title: 'Musikanlage', imageUrl: '/assets/musikanlage.jpg', price: 60 },
+    { id: 'laser', title: 'Laser-Lichtanlage', imageUrl: '/assets/laser.jpg', price: 20 },
+    { id: 'sportbox', title: 'Sportbox', imageUrl: '/assets/sportbox.jpg', price: 20 },
+    { id: 'riesen-jenga', title: 'Riesen-Jenga', imageUrl: '/assets/riesen_jenga.jpg', price: 10 },
+    { id: 'darts', title: 'Darts', imageUrl: '/assets/dartscheibe.jpg', price: 20 },
+    { id: 'lichter', title: 'Lichter', imageUrl: '/assets/lichter.jpg', price: 20 },
+    
+    {
+      id: 'paket-sport',
+      title: '🏀 Sportpaket',
+      imageUrl: '/assets/sport_paket.jpg',
+      price: 45,
+      description: 'Enthält: Sportbox, Riesen-Jenga, Darts',
+    },
+    {
+      id: 'paket-party',
+      title: '🎉 Party-Paket',
+      price: 65,
+      imageUrl: '/assets/party_paket.jpg',
+      description: 'Enthält: Musikanlage und Laser-Lichtanlage',
+    },
+    {
+      id: 'paket-allin',
+      title: '🔥 All-In Paket',
+      imageUrl: '/assets/paket_allin.jpeg',
+      price: 110,
+      description: 'Alle verfügbaren Extras in einem Rundum-sorglos-Paket!',
+    }
   ];
 
   onSlideChange(event: any) {

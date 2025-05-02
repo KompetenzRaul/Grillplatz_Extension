@@ -1,4 +1,4 @@
-.impressum-wrapper {
+.datenschutz-wrapper {
     max-width: 800px;
     margin: 4rem auto;
     padding: 1rem;
@@ -10,18 +10,18 @@
     box-shadow: 0 0 12px #0001;
   }
   
-  .impressum-wrapper h2 {
+  .datenschutz-wrapper h2 {
     text-align: center;
     color: #e53935;
     margin-bottom: 2rem;
   }
   
-  .impressum-wrapper a {
+  .datenschutz-wrapper h3 {
+    margin-top: 2rem;
     color: #e53935;
-    text-decoration: none;
   }
   
-  .impressum-wrapper a:hover {
-    text-decoration: underline;
+  .datenschutz-wrapper ul {
+    padding-left: 1.5rem;
   }
   

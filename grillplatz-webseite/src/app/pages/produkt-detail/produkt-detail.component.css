@@ -1,0 +1,99 @@
+.detail-wrapper {
+  max-width: 800px;
+  margin: 4rem auto;
+  padding: 1rem;
+  text-align: left;
+}
+
+.detail-wrapper h2 {
+  text-align: center;
+}
+
+.detail-wrapper img {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin: 1rem 0;
+}
+
+.preis-block {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: black;
+  margin: 1rem 0;
+}
+
+.beschreibung {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #444;
+  margin: 1rem 0;
+}
+
+.inhalt-bereich {
+  margin-top: 1rem;
+}
+
+.produkt-liste {
+  padding-left: 1.5rem;
+  color: #333;
+  font-size: 1rem;
+  margin-top: 0.5rem;
+}
+
+.produkt-liste li {
+  margin-bottom: 0.3rem;
+}
+
+.back-button {
+  display: inline-block;
+  margin-top: 2rem;
+  padding: 0.75rem 1.5rem;
+  background-color: #e53935;
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+  background-color: #c62828;
+}
+
+.service-bereich {
+  margin-top: 1.5rem;
+}
+
+.service-liste {
+  padding-left: 1.5rem;
+  color: #333;
+  font-size: 1rem;
+  margin-top: 0.5rem;
+}
+
+.service-liste li {
+  margin-bottom: 0.3rem;
+}
+
+.auswahl-button {
+  background-color: #ff9800;
+  color: white;
+  padding: 0.6rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  margin-top: 1rem;
+  margin-left: 4rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, opacity 0.3s ease;
+}
+
+/* Optional Hover Effekt */
+.auswahl-button:hover {
+  background-color: #fb8c00;
+}
+
+.auswahl-button.ausgewaehlt {
+  background-color: #4caf50;
+  opacity: 1;
+}

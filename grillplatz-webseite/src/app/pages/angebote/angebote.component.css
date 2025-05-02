@@ -15,5 +15,13 @@
   .carousel-section {
     display: flex;
     justify-content: center;
+    padding: 2rem 0;
+  }
+  
+  /* Zugriff auf das eingebettete Carousel innerhalb der Komponente */
+  :host ::ng-deep app-offer-gallery .p-carousel {
+    max-width: 1500px;
+    width: 100%;
+    margin: 0 auto;
   }
   

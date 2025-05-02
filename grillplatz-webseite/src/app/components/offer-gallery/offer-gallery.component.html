@@ -1,30 +1,22 @@
-<p-carousel
-  [value]="offers"
-  [numVisible]="3"
-  [numScroll]="1"
-  [circular]="true"
-  [showIndicators]="true"
-  [showNavigators]="true"
-  (onPage)="onSlideChange($event)"
-  styleClass="custom-carousel"
->
+<p-carousel [value]="offers" [numVisible]="3" [numScroll]="1" [circular]="true" [showIndicators]="true"
+  [showNavigators]="true" (onPage)="onSlideChange($event)" styleClass="custom-carousel">
   <ng-template let-offer let-index="index" pTemplate="item">
-    <div
-      class="carousel-item"
-      [class.active]="index === activeIndex"
+    <div class="carousel-item" [class.active]="index === activeIndex"
       [class.left]="index === (activeIndex - 1 + offers.length) % offers.length"
-      [class.right]="index === (activeIndex + 1) % offers.length"
-      [class.dimmed]="
+      [class.right]="index === (activeIndex + 1) % offers.length" [class.dimmed]="
         index !== activeIndex &&
         index !== (activeIndex - 1 + offers.length) % offers.length &&
         index !== (activeIndex + 1) % offers.length
-      "
-    >
+      ">
       <img [src]="offer.imageUrl" [alt]="offer.title" />
+      
+
       <h3>{{ offer.title }}</h3>
+      <p *ngIf="offer.description" class="paket-beschreibung">{{ offer.description }}</p>
+
       <div class="card-footer">
         <span class="price">{{ offer.price }} €</span>
-        <button pButton label="Zum Angebot" class="p-button-success"></button>
+        <a [routerLink]="['/produkte', offer.id]" class="p-button p-button-success">Zum Angebot</a>
       </div>
     </div>
   </ng-template>

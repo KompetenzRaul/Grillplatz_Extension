@@ -83,3 +83,17 @@
   color: white;
   border: none;
 }
+a.p-button {
+  text-decoration: none;
+}
+
+a.p-button:hover {
+  text-decoration: none;       
+}
+
+.paket-beschreibung {
+  font-size: 0.95rem;
+  margin-top: 0.3rem;
+  color: #555;
+}
+
