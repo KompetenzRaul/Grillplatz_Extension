@@ -73,14 +73,14 @@
 }
 
 .p-button-success {
-  background-color: var(--primary-color);
-  border: none;
-  color: white;
+  background-color: var(--primary-color) !important;
+  border: none !important;
+  color: white !important;
 }
 
 .p-button-success:hover {
-  background-color: var(--primary-hover);
-  color: white;
+  background-color: var(--primary-hover) !important;
+  color: white !important;
   border: none;
 }
 a.p-button {

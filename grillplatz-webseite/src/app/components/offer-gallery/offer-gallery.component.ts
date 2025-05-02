@@ -1,4 +1,4 @@
-import { Component, AfterViewInit, ChangeDetectorRef } from '@angular/core';
+import { Component, AfterViewInit } from '@angular/core';
 import { CarouselModule } from 'primeng/carousel';
 import { ButtonModule } from 'primeng/button';
 import { CommonModule } from '@angular/common';
@@ -44,11 +44,11 @@ export class OfferGalleryComponent implements AfterViewInit {
     }
   ];
 
-  constructor(private cdRef: ChangeDetectorRef) {}
+  
+
+  
 
   ngAfterViewInit() {
-    // Erzwingt ein erneutes Rendering nach dem Laden der View
-    this.cdRef.detectChanges();
   }
 
   onSlideChange(event: any) {
