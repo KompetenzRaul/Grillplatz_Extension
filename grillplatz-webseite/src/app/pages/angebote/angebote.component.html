@@ -1,7 +1,15 @@
 <div class="angebote-wrapper">
-    <h2 class="section-title">Unsere Angebote für deinen Tag am Grillplatz</h2>
-    <section class="carousel-section">
-      <app-offer-gallery></app-offer-gallery>
-    </section>
+  <h2 class="section-title">Unsere Angebote</h2>
+
+  <div class="angebote-grid">
+    <div class="angebot-card" *ngFor="let offer of offers">
+      <img [src]="offer.imageUrl" [alt]="offer.title" />
+      <h3>{{ offer.title }}</h3>
+      <p class="preis">{{ offer.price }} €</p>
+      
+      <a [routerLink]="['/produkte', offer.id]">
+        <button class="p-button-success">Zum Angebot</button>
+      </a>
+    </div>
   </div>
-  
+</div>
