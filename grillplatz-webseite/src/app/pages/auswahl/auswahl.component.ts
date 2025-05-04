@@ -81,39 +81,30 @@ export class AuswahlComponent implements OnInit {
       return;
     }
   
-    const zusammenfassung = `
-      Anfrage von: ${this.form.vorname} ${this.form.nachname}
-      E-Mail: ${this.form.email}
-      Datum: ${this.form.datum}
-      Produkte: ${this.produkte.map(p => p.title).join(', ')}
-      Notiz: ${this.form.notiz || 'Keine'}
-    `;
-  
-    console.log(zusammenfassung);
-    
-    // Pop-up anzeigen
-    this.successMessage = '✅ Deine Anfrage wurde erfolgreich gesendet!<br> Wir melden uns bald bei dir.';
-    this.showSuccessPopup = true;
-    setTimeout(() => {
-      this.showSuccessPopup = false;
-    }, 3000);
-  
-    this.form = { vorname: '', nachname: '', datum: '', email: '', notiz: '' };
-  }
-  
-
-
-  clearForm(): void {
-    this.form = {
-      vorname: '',
-      nachname: '',
-      datum: '',
-      email: '',
-      notiz: ''
+    const templateParams = {
+      vorname: this.form.vorname,
+      nachname: this.form.nachname,
+      email: this.form.email,
+      datum: this.form.datum,
+      notiz: this.form.notiz || 'Keine',
+      produkte: this.produkte.map(p => p.title).join(', ')
     };
-    this.produkte = [];
-    this.auswahlService.clear();
+  
+    emailjs.send('service_Anfragen', 'template_os9m9k2', templateParams, 'rNufsCOoXqgkmyJPr')
+      .then(() => {
+        this.successMessage = '✅ Deine Anfrage wurde erfolgreich gesendet!<br> Wir melden uns bald bei dir.';
+        this.showSuccessPopup = true;
+  
+        this.form = { vorname: '', nachname: '', datum: '', email: '', notiz: '' };
+  
+        setTimeout(() => {
+          this.showSuccessPopup = false;
+        }, 3000);
+      })
+      .catch((error) => {
+        console.error('Fehler beim Senden:', error);
+        alert('❌ Es gab ein Problem beim Senden deiner Anfrage.');
+      });
   }
-
-}
+}  
 
