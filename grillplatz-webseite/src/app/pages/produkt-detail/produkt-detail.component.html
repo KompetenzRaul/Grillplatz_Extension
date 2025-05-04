@@ -23,17 +23,18 @@
   
   
 
-  <a routerLink="/angebote" class="back-button">Zurück zur Übersicht</a>
-
-  <button
-  (click)="toggleAuswahl()"
-  class="auswahl-button"
-  [class.ausgewaehlt]="istAusgewaehlt"
->
-  <span *ngIf="istAusgewaehlt">✔ Ausgewählt</span>
-  <span *ngIf="!istAusgewaehlt">+ Zur Auswahl hinzufügen</span>
-
-</button>
-
+  <div class="button-row">
+    <a routerLink="/angebote" class="back-button">Zurück zur Übersicht</a>
+  
+    <button
+      (click)="toggleAuswahl()"
+      class="auswahl-button"
+      [class.ausgewaehlt]="istAusgewaehlt"
+    >
+      <span *ngIf="istAusgewaehlt">✔ Ausgewählt</span>
+      <span *ngIf="!istAusgewaehlt">+ Zur Auswahl hinzufügen</span>
+    </button>
+  </div>
+  
   
 </div>

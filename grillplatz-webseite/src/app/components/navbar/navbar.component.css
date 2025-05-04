@@ -56,32 +56,23 @@
 
 .hamburger {
   display: none;
-  font-size: 2rem;
-  background: none;
-  border: none;
-  color: #000; /* schwarz sichtbar */
-  cursor: pointer;
 }
 
 /* Responsive */
 @media (max-width: 768px) {
-  
-  .navbar {
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-  }
-
   .hamburger {
     display: block;
-    margin-left: 0;
-    margin-right: 1rem;
-  }
+    font-size: 2rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: black;
 
-  .navbar-brand {
-    margin-left: auto;
+    position: absolute;
+    left: 1rem;
+    top: 1.5rem;
+    z-index: 1001;
   }
-}
 
   .nav-links {
     display: none;
@@ -105,3 +96,11 @@
     text-align: center;
   }
 
+  .navbar {
+    justify-content: center; /* zentriert das Logo */
+  }
+
+  .navbar-brand {
+    margin: 0 auto; /* zentriert das Logo */
+  }
+}

@@ -5,41 +5,46 @@
   --background-light: #ffffff;
 }
 
-/* Basis-Layout für Seite */
+body {
+  font-family: 'Segoe UI', 'Arial', system-ui, sans-serif;
+  background-color: #ffffff;
+  color: #222;
+}
+
 html, body {
   height: 100%;
   margin: 0;
-  padding: 0;
+}
+
+body {
   display: flex;
   flex-direction: column;
 }
 
-body {
-  font-family: 'Segoe UI', 'Arial', system-ui, sans-serif;
-  background-color: var(--background-light);
-  color: var(--text-dark);
+app-root {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 
-/* Root-Element (Angular App Container) */
-app-root {
+footer {
+  margin-top: auto;
+}
+
+:host {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
 
-/* Main-Container für Router-Inhalte */
-.page-wrapper {
+app-offer-gallery {
+  flex-grow: 1;
+}
+@media (max-width: 768px) {
+main {
   flex: 1;
   display: flex;
   flex-direction: column;
+  min-height: 210vh;
 }
-
-/* Footer bleibt am unteren Rand */
-footer {
-  margin-top: auto;
-}
-
-/* Optional: Verhindert zu viel horizontalen Scroll auf kleinen Bildschirmen */
-* {
-  box-sizing: border-box;
 }
