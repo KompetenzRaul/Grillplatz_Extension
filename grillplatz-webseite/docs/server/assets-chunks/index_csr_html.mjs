@@ -1,0 +1,14 @@
+export default `<!doctype html>
+<html lang="en" data-beasties-container="">
+<head>
+  <meta charset="utf-8">
+  <title>GrillplatzWebseite</title>
+  <base href="/Grillplatz_Extension/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+<style>:root{--primary-color:#e53935;--primary-hover:#c62828;--text-dark:#222;--background-light:#ffffff}body{font-family:Segoe UI,Arial,system-ui,sans-serif;background-color:#fff;color:#222}</style><link rel="stylesheet" href="styles-43YEDSLV.css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="styles-43YEDSLV.css"></noscript></head>
+<body ngcm="">
+  <app-root></app-root>
+<script src="polyfills-FFHMD2TL.js" type="module"></script><script src="main-XLWZETIO.js" type="module"></script></body>
+</html>
+`;
