@@ -25,57 +25,57 @@ export class OfferGalleryComponent implements AfterViewInit {
       {
         id: 'musikanlage',
         title: 'Musikanlage',
-        imageUrl: this.baseHref + 'assets/musikanlage.jpg',
+        imageUrl:  'assets/musikanlage.jpg',
         price: 60
       },
       {
         id: 'laser',
         title: 'Laser-Lichtanlage',
-        imageUrl: this.baseHref + 'assets/laser.jpg',
+        imageUrl:  'assets/laser.jpg',
         price: 20
       },
       {
         id: 'sportbox',
         title: 'Sportbox',
-        imageUrl: this.baseHref + 'assets/sportbox.jpg',
+        imageUrl:  'assets/sportbox.jpg',
         price: 20
       },
       {
         id: 'riesen-jenga',
         title: 'Riesen-Jenga',
-        imageUrl: this.baseHref + 'assets/riesen_jenga.jpg',
+        imageUrl:  'assets/riesen_jenga.jpg',
         price: 10
       },
       {
         id: 'darts',
         title: 'Darts',
-        imageUrl: this.baseHref + 'assets/dartscheibe.jpg',
+        imageUrl:  'assets/dartscheibe.jpg',
         price: 20
       },
       {
         id: 'lichter',
         title: 'Lichter',
-        imageUrl: this.baseHref + 'assets/lichter.jpg',
+        imageUrl:  'assets/lichter.jpg',
         price: 20
       },
       {
         id: 'paket-sport',
         title: '🏀 Sportpaket',
-        imageUrl: this.baseHref + 'assets/sport_paket.jpg',
+        imageUrl:  'assets/sport_paket.jpg',
         price: 45,
         description: 'Enthält: Sportbox, Riesen-Jenga, Darts'
       },
       {
         id: 'paket-party',
         title: '🎉 Party-Paket',
-        imageUrl: this.baseHref + 'assets/party_paket.jpg',
+        imageUrl:  'assets/party_paket.jpg',
         price: 65,
         description: 'Enthält: Musikanlage und Laser-Lichtanlage'
       },
       {
         id: 'paket-allin',
         title: '🔥 All-In Paket',
-        imageUrl: this.baseHref + 'assets/paket_allin.jpeg',
+        imageUrl:  'assets/paket_allin.jpeg',
         price: 110,
         description: 'Alle verfügbaren Extras in einem Rundum-sorglos-Paket!'
       }
