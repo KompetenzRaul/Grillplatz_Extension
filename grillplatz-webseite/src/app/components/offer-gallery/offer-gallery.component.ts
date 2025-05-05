@@ -1,7 +1,7 @@
-import { Component, AfterViewInit } from '@angular/core';
+import { Component, Inject, AfterViewInit } from '@angular/core';
 import { CarouselModule } from 'primeng/carousel';
 import { ButtonModule } from 'primeng/button';
-import { CommonModule } from '@angular/common';
+import { CommonModule, DOCUMENT } from '@angular/common';
 import { RouterModule } from '@angular/router';
 
 @Component({
@@ -13,43 +13,76 @@ import { RouterModule } from '@angular/router';
 })
 export class OfferGalleryComponent implements AfterViewInit {
   activeIndex: number = 0;
+  baseHref: string = '';
+  offers: any[] = [];
 
-  offers = [
-    { id: 'musikanlage', title: 'Musikanlage', imageUrl: 'assets/musikanlage.jpg', price: 60 },
-    { id: 'laser', title: 'Laser-Lichtanlage', imageUrl: 'assets/laser.jpg', price: 20 },
-    { id: 'sportbox', title: 'Sportbox', imageUrl: 'assets/sportbox.jpg', price: 20 },
-    { id: 'riesen-jenga', title: 'Riesen-Jenga', imageUrl: 'assets/riesen_jenga.jpg', price: 10 },
-    { id: 'darts', title: 'Darts', imageUrl: 'assets/dartscheibe.jpg', price: 20 },
-    { id: 'lichter', title: 'Lichter', imageUrl: 'assets/lichter.jpg', price: 20 },
-    {
-      id: 'paket-sport',
-      title: '🏀 Sportpaket',
-      imageUrl: 'assets/sport_paket.jpg',
-      price: 45,
-      description: 'Enthält: Sportbox, Riesen-Jenga, Darts',
-    },
-    {
-      id: 'paket-party',
-      title: '🎉 Party-Paket',
-      price: 65,
-      imageUrl: 'assets/party_paket.jpg',
-      description: 'Enthält: Musikanlage und Laser-Lichtanlage',
-    },
-    {
-      id: 'paket-allin',
-      title: '🔥 All-In Paket',
-      imageUrl: 'assets/paket_allin.jpeg',
-      price: 110,
-      description: 'Alle verfügbaren Extras in einem Rundum-sorglos-Paket!',
-    }
-  ];
+  constructor(@Inject(DOCUMENT) private document: Document) {
+    // Holt das <base href="..."> aus index.html
+    this.baseHref = document.getElementsByTagName('base')[0].getAttribute('href') || '';
 
-  
-
-  
-
-  ngAfterViewInit() {
+    // Angebote initialisieren
+    this.offers = [
+      {
+        id: 'musikanlage',
+        title: 'Musikanlage',
+        imageUrl: this.baseHref + 'assets/musikanlage.jpg',
+        price: 60
+      },
+      {
+        id: 'laser',
+        title: 'Laser-Lichtanlage',
+        imageUrl: this.baseHref + 'assets/laser.jpg',
+        price: 20
+      },
+      {
+        id: 'sportbox',
+        title: 'Sportbox',
+        imageUrl: this.baseHref + 'assets/sportbox.jpg',
+        price: 20
+      },
+      {
+        id: 'riesen-jenga',
+        title: 'Riesen-Jenga',
+        imageUrl: this.baseHref + 'assets/riesen_jenga.jpg',
+        price: 10
+      },
+      {
+        id: 'darts',
+        title: 'Darts',
+        imageUrl: this.baseHref + 'assets/dartscheibe.jpg',
+        price: 20
+      },
+      {
+        id: 'lichter',
+        title: 'Lichter',
+        imageUrl: this.baseHref + 'assets/lichter.jpg',
+        price: 20
+      },
+      {
+        id: 'paket-sport',
+        title: '🏀 Sportpaket',
+        imageUrl: this.baseHref + 'assets/sport_paket.jpg',
+        price: 45,
+        description: 'Enthält: Sportbox, Riesen-Jenga, Darts'
+      },
+      {
+        id: 'paket-party',
+        title: '🎉 Party-Paket',
+        imageUrl: this.baseHref + 'assets/party_paket.jpg',
+        price: 65,
+        description: 'Enthält: Musikanlage und Laser-Lichtanlage'
+      },
+      {
+        id: 'paket-allin',
+        title: '🔥 All-In Paket',
+        imageUrl: this.baseHref + 'assets/paket_allin.jpeg',
+        price: 110,
+        description: 'Alle verfügbaren Extras in einem Rundum-sorglos-Paket!'
+      }
+    ];
   }
+
+  ngAfterViewInit() {}
 
   onSlideChange(event: any) {
     this.activeIndex = event.page;
