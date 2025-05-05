@@ -12,7 +12,7 @@ export interface Produkt {
     {
       id: 'musikanlage',
       title: 'Musikanlage',
-      imageUrl: '/assets/musikanlage.jpg',
+      imageUrl: 'assets/musikanlage.jpg',
       price: 60,
       description: 'Diese Musikanlage bringt einen tollen Sound auf jede Veranstaltung. Diese kommt zusätztlich mit einem großen Subwoofer, der für einen satten Bass sorgt. Die Bedienung ist sehr einfach über das Handy mit Bluetooth oder über das AUX-Kabel. Die Musikanlage ist einzelnd buchbar oder als Kombination mit der Laser-Lichtanlage für einen sehr schöne Party-Atmosphäre für nur 70€.',
       services: [
@@ -24,7 +24,7 @@ export interface Produkt {
     {
       id: 'sportbox',
       title: 'Sportbox',
-      imageUrl: '/assets/sportbox.jpg',
+      imageUrl: 'assets/sportbox.jpg',
       price: 20,
       description: 'Diese Sportbox enthält eine Vielzahl an Sportgeräten für viel Spiel und Spaß.',
       items: [
@@ -42,28 +42,28 @@ export interface Produkt {
     {
       id: 'darts',
       title: 'Darts',
-      imageUrl: '/assets/dartscheibe.jpg',
-      price: 15,
+      imageUrl: 'assets/dartscheibe.jpg',
+      price: 20,
       description: 'Eine Klassische Dartscheibe für alle Altersgruppen. Sie ist einfach zu bewegen und kann überall verwendet werden. Die Dartscheibe ist aus hochwertigem Material gefertigt.'
     },
     {
       id: 'riesen-jenga',
       title: 'Riesen-Jenga',
-      imageUrl: '/assets/riesen_jenga.jpg',
+      imageUrl: 'assets/riesen_jenga.jpg',
       price: 10,
       description: 'Das strategische Holzspiel für alle Altersgruppen. Baue einen Turm aus Holzklötzen und ziehe abwechselnd einen Block heraus, ohne dass der Turm umfällt. Das Spiel fördert Geschicklichkeit und Konzentration und sorgt für jede Menge Spaß.'
     },
     {
       id: 'lichter',
       title: 'Lichter',
-      imageUrl: '/assets/lichter.jpg',
-      price: 10,
+      imageUrl: 'assets/lichter.jpg',
+      price: 20,
       description: 'Schöne und Kraftvolle Lichterquelle für eine tolle Atmosphäre. Diese Lichter sind einfach zu bedienen und können ganz mobil überall verwendet werden.'
     },
     {
       id: 'laser',
       title: 'Laser-Lichtanlage',
-      imageUrl: '/assets/laser.jpg',
+      imageUrl: 'assets/laser.jpg',
       price: 20,
       description: 'Diese Laser-Lichtanlage sorgt für eine coole Party-Atmosphäre. Sie ist einfach zu bedienen und kann in verschiedenen Modi betrieben werden, z.B. im Musikmodus, wo die Lichter im Takt der Musik leuchten. Die Laser-Lichtanlage ist einzelnd buchbar oder zusammen mit der Musikanlage für nur 70€.',
       services: [
@@ -75,7 +75,7 @@ export interface Produkt {
     {
       id: 'paket-sport',
       title: '🏀 Sportpaket',
-      imageUrl: '/assets/sport_paket.jpg',
+      imageUrl: 'assets/sport_paket.jpg',
       price: 45,
       description: 'Unser Sportpaket kombiniert Bewegung und Spaß für alle Altersgruppen. Ideal für Gruppen, Familien und Kindergeburtstage.',
       items: [
@@ -87,8 +87,8 @@ export interface Produkt {
     {
       id: 'paket-party',
       title: '🎉 party_paket',
-      imageUrl: '/assets/party_paket.jpg',
-      price: 65,
+      imageUrl: 'assets/party_paket.jpg',
+      price: 70,
       description: 'Partyfeeling garantiert – unser Party-Paket besteht aus der kraftvollen Musikanlage und der farbenfrohen Laser-Lichtanlage.',
       items: [
         'Musikanlage',
@@ -103,7 +103,7 @@ export interface Produkt {
     {
       id: 'paket-allin',
       title: '🔥 All-In Paket',
-      imageUrl: '/assets/paket_allin.jpeg',
+      imageUrl: 'assets/paket_allin.jpeg',
       price: 110,
       description: 'Das All-In-Paket enthält alle Extras – für maximale Ausstattung und stressfreies Event-Feeling zum Vorteilspreis.',
       items: [

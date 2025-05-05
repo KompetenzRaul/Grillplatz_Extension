@@ -69,7 +69,7 @@ export class OfferGalleryComponent implements AfterViewInit {
         id: 'paket-party',
         title: '🎉 Party-Paket',
         imageUrl: this.baseHref + 'assets/party_paket.jpg',
-        price: 65,
+        price: 70,
         description: 'Enthält: Musikanlage und Laser-Lichtanlage'
       },
       {
