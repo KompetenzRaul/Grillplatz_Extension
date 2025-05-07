@@ -49,7 +49,7 @@
 .back-button {
   display: inline-block;
   margin-top: 2rem;
-  padding: 0.75rem 1.5rem;
+  padding: 0.75rem 1rem;
   background-color: #e53935;
   color: white;
   border-radius: 8px;
@@ -79,24 +79,44 @@
 .auswahl-button {
   background-color: #ff9800;
   color: white;
-  padding: 0.6rem 1.5rem;
+  padding: 0.75rem 1.75rem;
+  font-size: 1rem;
+  font-weight: 500;
   border: none;
-  border-radius: 8px;
+  border-radius: 10px;
   margin-top: 1rem;
-  margin-left: 1rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   cursor: pointer;
-  transition: background-color 0.3s ease, opacity 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-/* Optional Hover Effekt */
 .auswahl-button:hover {
   background-color: #fb8c00;
+  transform: translateY(-2px);
 }
 
 .auswahl-button.ausgewaehlt {
   background-color: #4caf50;
-  opacity: 1;
 }
+
+/* Neuer Stil für den Zurück-Button */
+.back-button {
+  display: inline-block;
+  margin-top: 2rem;
+  padding: 0.75rem 1.25rem;
+  background-color: #e0e0e0;
+  color: #333;
+  font-weight: 500;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.back-button:hover {
+  background-color: #d5d5d5;
+  color: black;
+}
+
 
 
 
@@ -104,7 +124,6 @@
 @media (max-width: 480px) {
   .button-row {
     display: flex;
-    gap: 1rem;
     margin-top: 0.5rem;
     flex-wrap: wrap;
   }

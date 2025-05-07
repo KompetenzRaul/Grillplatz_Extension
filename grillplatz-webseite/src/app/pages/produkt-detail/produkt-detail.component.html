@@ -24,8 +24,7 @@
   
 
   <div class="button-row">
-    <a routerLink="/angebote" class="back-button">Zurück zur Übersicht</a>
-  
+    
     <button
       (click)="toggleAuswahl()"
       class="auswahl-button"
@@ -34,7 +33,10 @@
       <span *ngIf="istAusgewaehlt">✔ Ausgewählt</span>
       <span *ngIf="!istAusgewaehlt">+ Zur Auswahl hinzufügen</span>
     </button>
+
+    
   </div>
+  <a routerLink="/angebote" class="back-button">Zurück zur Übersicht</a>
   
   
 </div>

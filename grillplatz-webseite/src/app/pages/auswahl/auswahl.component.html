@@ -1,94 +1,94 @@
-<div class="auswahl-wrapper">
-    <h2>Deine Auswahl</h2>
-  
-    <div *ngIf="produkte.length === 0" class="keine-auswahl">
-      Du hast noch keine Produkte ausgewählt.
-    </div>
-  
-    <div *ngFor="let produkt of produkte" class="produkt-box">
-      <a [routerLink]="['/produkte', produkt.id]" class="produkt-link">
-        <img [src]="produkt.imageUrl" [alt]="produkt.title" />
-        <h3>{{ produkt.title }}</h3>
-        <p>{{ produkt.price }} €</p>
-      </a>
-      
-      <div>
-        
-        <button (click)="entferne(produkt.id)">Entfernen</button>
+  <div class="auswahl-wrapper">
+      <h2>Deine Auswahl</h2>
+    
+      <div *ngIf="produkte.length === 0" class="keine-auswahl">
+        Du hast noch keine Produkte ausgewählt.
       </div>
-    </div>
-  
-    <div *ngIf="produkte.length" class="gesamtpreis">
-      Gesamtpreis: <strong>{{ getGesamtpreis() }} €  (unverbindlich)</strong>
-    </div>
-  
-    <button *ngIf="produkte.length" class="leeren-button" (click)="zeigeDialog()">
-      Alle entfernen
-    </button>
-  
-    <!-- Dialog -->
-    <div *ngIf="anzeigenDialog" class="dialog-overlay">
-      <div class="dialog-box">
-        <p>Möchtest du wirklich deine gesamte Auswahl entfernen?</p>
-        <div class="dialog-buttons">
-          <button (click)="bestaetigen()">Ja, entfernen</button>
-          <button (click)="abbrechen()">Abbrechen</button>
+    
+      <div *ngFor="let produkt of produkte" class="produkt-box">
+        <a [routerLink]="['/produkte', produkt.id]" class="produkt-link">
+          <img [src]="produkt.imageUrl" [alt]="produkt.title" />
+          <div class="produkt-info">
+            <h3>{{ produkt.title }}</h3>
+            <p class="produkt-preis">{{ produkt.price }} €</p>
+          </div>
+          
+        </a>
+      
+        <div class="button-container">
+          <button (click)="entferne(produkt.id)">Entfernen</button>
         </div>
       </div>
+      
+      
+    
+      <div *ngIf="produkte.length" class="gesamtpreis">
+        Gesamtpreis: <strong>{{ getGesamtpreis() }} €  (unverbindlich)</strong>
+      </div>
+    
+      <button *ngIf="produkte.length" class="leeren-button" (click)="zeigeDialog()">
+        Alle entfernen
+      </button>
+    
+      <!-- Dialog -->
+      <div *ngIf="anzeigenDialog" class="dialog-overlay">
+        <div class="dialog-box">
+          <p>Möchtest du wirklich deine gesamte Auswahl entfernen?</p>
+          <div class="dialog-buttons">
+            <button (click)="bestaetigen()">Ja, entfernen</button>
+            <button (click)="abbrechen()">Abbrechen</button>
+          </div>
+        </div>
+      </div>
+    
+      <!-- Anfrageformular -->
+      <form class="anfrage-form" (ngSubmit)="anfrageSenden()" #anfrageForm="ngForm">
+        <p class="info-text">
+          Fülle bitte dieses Formular aus, um eine unverbindliche und stressfreie Anfrage zu senden. Wir werden uns so schnell wie möglich bei dir melden.
+        </p>
+    
+        <h3>Angaben zur Anfrage</h3>
+    
+        <div class="form-group">
+          <label for="vorname">Vorname</label>
+          <input id="vorname" name="vorname" type="text" required [(ngModel)]="form.vorname" />
+        </div>
+    
+        <div class="form-group">
+          <label for="nachname">Nachname</label>
+          <input id="nachname" name="nachname" type="text" required [(ngModel)]="form.nachname" />
+        </div>
+    
+        <div class="form-group">
+          <label for="datum">Mietdatum</label>
+          <input id="datum" name="datum" type="date" required [(ngModel)]="form.datum" />
+        </div>
+    
+        <div class="form-group">
+          <label for="email">E-Mail</label>
+          <input id="email" name="email" type="email" required [(ngModel)]="form.email" />
+        </div>
+    
+        <div class="form-group">
+          <label for="notiz">Weitere Anmerkungen / Notizen (optional)</label>
+          <textarea
+            id="notiz"
+            name="notiz"
+            rows="4"
+            [(ngModel)]="form.notiz"
+          ></textarea>
+        </div>
+    
+        <button type="submit" class="senden-button">Anfrage senden</button>
+      </form>
     </div>
-  
-    <!-- Anfrageformular -->
-    <form class="anfrage-form" (ngSubmit)="anfrageSenden()" #anfrageForm="ngForm">
-      <p class="info-text">
-        Hier unten befindet sich das Anfrageformular.<br />
-        Bitte fülle alle Felder aus, um deine Anfrage zu senden. Diese Anfrage ist unverbindlich und mit keinerlei Kosten verbunden.<br />
-        Die Informationen zu deiner Anfrage und Bezahlung erhältst du dann per E-Mail.<br />
-        Die Bezahlung ist im Regelfall über eine Überweisung oder direkt am Tag der Schlüsselübergabe in Bar möglich.<br />
-        Wir werden uns so schnell wie möglich bei dir melden, um deine Anfrage zu bearbeiten.
-      </p>
-  
-      <h3>Angaben zur Anfrage</h3>
-  
-      <div class="form-group">
-        <label for="vorname">Vorname</label>
-        <input id="vorname" name="vorname" type="text" required [(ngModel)]="form.vorname" />
-      </div>
-  
-      <div class="form-group">
-        <label for="nachname">Nachname</label>
-        <input id="nachname" name="nachname" type="text" required [(ngModel)]="form.nachname" />
-      </div>
-  
-      <div class="form-group">
-        <label for="datum">Mietdatum</label>
-        <input id="datum" name="datum" type="date" required [(ngModel)]="form.datum" />
-      </div>
-  
-      <div class="form-group">
-        <label for="email">E-Mail</label>
-        <input id="email" name="email" type="email" required [(ngModel)]="form.email" />
-      </div>
-  
-      <div class="form-group">
-        <label for="notiz">Weitere Anmerkungen / Notizen (optional)</label>
-        <textarea
-          id="notiz"
-          name="notiz"
-          rows="4"
-          [(ngModel)]="form.notiz"
-        ></textarea>
-      </div>
-  
-      <button type="submit" class="senden-button">Anfrage senden</button>
-    </form>
-  </div>
 
-  <div *ngIf="showSuccessPopup" class="success-popup">
-    <div class="popup-content">
-      <div class="checkmark">✔</div>
-      <p [innerHTML]="successMessage"></p>
+    <div *ngIf="showSuccessPopup" class="success-popup">
+      <div class="popup-content">
+        <div class="checkmark">✔</div>
+        <p [innerHTML]="successMessage"></p>
 
+      </div>
     </div>
-  </div>
-  
-  
+    
+    

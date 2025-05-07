@@ -243,6 +243,112 @@
     font-size: 1.1rem;
     color: #333;
   }
+
+  .button-container {
+    margin-top: auto;
+    align-self: flex-start;
+    padding-top: 0.5rem;
+    
+  }
   
+  .button-container button {
+    background-color: #e53935;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
   
-  
+  @media (max-width: 600px) {
+    .produkt-box {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      margin-bottom: 2rem;
+      padding: 1rem;
+      border: 1px solid #ddd;
+      border-radius: 12px;
+      background-color: #fafafa;
+      box-shadow: 0 0 8px #0001;
+    }
+    
+    .produkt-link {
+      display: flex;
+      align-items: center;
+      justify-content: space-between; /* Wichtig */
+      width: 100%;
+      gap: 1rem;
+    }
+
+    .produkt-info {
+      flex: 1;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .produkt-info h3 {
+      margin: 0;
+      font-size: 1.1rem;
+      font-weight: bold;
+    }
+
+    .produkt-preis {
+      margin: 0;
+      font-size: 1rem;
+      color: #444;
+      white-space: nowrap;
+    }
+    
+    
+    .produkt-box img {
+      width: 120px;
+      height: 90px;
+      object-fit: cover;
+      border-radius: 6px;
+    }
+    .produkt-text {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+    }
+    
+    .produkt-text h3 {
+      flex-grow: 1;
+      margin: 0;
+      font-size: 1.1rem;
+    }
+    
+    .produkt-text p {
+      margin: 0;
+      font-size: 1rem;
+      color: #444;
+      white-space: nowrap;
+    }
+    
+    
+    
+    .button-container {
+      margin-top: auto;
+      align-self: flex-start;
+      padding-top: 0.5rem;;
+    }
+    
+    .button-container button {
+      background-color: #e53935;
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    
+    .button-container button:hover {
+      background-color: #c62828;
+    }
+  }    
