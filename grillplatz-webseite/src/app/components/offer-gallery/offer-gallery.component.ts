@@ -75,7 +75,7 @@ export class OfferGalleryComponent implements AfterViewInit {
       {
         id: 'paket-allin',
         title: '🔥 All-In Paket',
-        imageUrl: this.baseHref + 'assets/paket_allin.jpeg',
+        imageUrl: this.baseHref + 'assets/paket_allin.jpg',
         price: 110,
         description: 'Alle verfügbaren Extras in einem Rundum-sorglos-Paket!'
       }

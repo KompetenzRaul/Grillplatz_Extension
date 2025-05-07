@@ -103,7 +103,7 @@ export interface Produkt {
     {
       id: 'paket-allin',
       title: '🔥 All-In Paket',
-      imageUrl: 'assets/paket_allin.jpeg',
+      imageUrl: 'assets/paket_allin.jpg',
       price: 110,
       description: 'Das All-In-Paket enthält alle Extras – für maximale Ausstattung und stressfreies Event-Feeling zum Vorteilspreis.',
       items: [
