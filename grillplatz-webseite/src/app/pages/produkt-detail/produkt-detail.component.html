@@ -1,7 +1,9 @@
 <div class="detail-wrapper" *ngIf="produkt">
   <h2>{{ produkt.title }}</h2>
 
-  <img [src]="produkt.imageUrl" [alt]="produkt.title" />
+  <div class="bild-galerie" *ngIf="produkt.imageUrls && produkt.imageUrls.length > 0">
+    <img *ngFor="let img of produkt.imageUrls" [src]="img" [alt]="produkt.title" />
+  </div>
 
   <div class="preis-block">{{ produkt.price }} €</div>
 

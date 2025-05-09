@@ -117,9 +117,21 @@
   color: black;
 }
 
+.bild-galerie {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  padding: 1rem 0;
+}
 
-
-
+.bild-galerie img {
+  flex-shrink: 0;
+  width: 100%;
+  max-width: 400px;
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: 12px;
+}
 /* Mobile: Untereinander zentriert */
 @media (max-width: 480px) {
   .button-row {

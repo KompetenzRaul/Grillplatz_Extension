@@ -2,6 +2,7 @@ export interface Produkt {
     id: string;
     title: string;
     imageUrl: string;
+    imageUrls?: string[];
     price: number;
     description: string;
     items?: string[];
@@ -25,6 +26,7 @@ export interface Produkt {
       id: 'sportbox',
       title: 'Sportbox',
       imageUrl: 'assets/sportbox.jpg',
+      imageUrls: ['assets/sportbox.jpg', 'assets/sportbox_2.jpg','assets/sportbox_3.jpg','assets/sportbox_4.jpg','assets/sportbox_5.jpg','assets/sportbox_6.jpg'],
       price: 20,
       description: 'Diese Sportbox enthält eine Vielzahl an Sportgeräten für viel Spiel und Spaß.',
       items: [
