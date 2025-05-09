@@ -17,7 +17,7 @@ export interface Produkt {
       description: 'Diese Musikanlage bringt einen tollen Sound auf jede Veranstaltung. Diese kommt zusätztlich mit einem großen Subwoofer, der für einen satten Bass sorgt. Die Bedienung ist sehr einfach über das Handy mit Bluetooth oder über das AUX-Kabel. Die Musikanlage ist einzelnd buchbar oder als Kombination mit der Laser-Lichtanlage für einen sehr schöne Party-Atmosphäre für nur 70€.',
       services: [
         "Aufbau der Anlage",
-        "Einrichten der Verbindung zuim Handy",
+        "Einrichten der Verbindung zum Handy",
         "Einweisung in die Bedienung der Anlage",
       ]
     },
@@ -32,10 +32,10 @@ export interface Produkt {
         '2x leichter Plastikfußball',
         '2x Volleyball',
         '1x Wurfrakete',
-        '3x Springseil',
-        '1x Football',
-        '1x Frisbee',
-        '1x Ballpumnpe'
+        '1x Frisbee-Wurfring',
+        '1x Ballpumnpe',
+        '1x Badmintonset (2x Schläger, 2x Federball)',
+        '1x Wikinger-Schach',
       ]
     },
     
@@ -54,13 +54,6 @@ export interface Produkt {
       description: 'Das strategische Holzspiel für alle Altersgruppen. Baue einen Turm aus Holzklötzen und ziehe abwechselnd einen Block heraus, ohne dass der Turm umfällt. Das Spiel fördert Geschicklichkeit und Konzentration und sorgt für jede Menge Spaß.'
     },
     {
-      id: 'lichter',
-      title: 'Lichter',
-      imageUrl: 'assets/lichter.jpg',
-      price: 20,
-      description: 'Schöne und Kraftvolle Lichterquelle für eine tolle Atmosphäre. Diese Lichter sind einfach zu bedienen und können ganz mobil überall verwendet werden.'
-    },
-    {
       id: 'laser',
       title: 'Laser-Lichtanlage',
       imageUrl: 'assets/laser.jpg',
@@ -76,12 +69,12 @@ export interface Produkt {
       id: 'paket-sport',
       title: '🏀 Sportpaket',
       imageUrl: 'assets/sport_paket.jpg',
-      price: 45,
+      price: 40,
       description: 'Unser Sportpaket kombiniert Bewegung und Spaß für alle Altersgruppen. Ideal für Gruppen, Familien und Kindergeburtstage.',
       items: [
         'Sportbox',
         'Riesen-Jenga',
-        'Dartscheibe'
+        'Darts'
       ]
     },
     {
@@ -104,7 +97,7 @@ export interface Produkt {
       id: 'paket-allin',
       title: '🔥 All-In Paket',
       imageUrl: 'assets/paket_allin.jpg',
-      price: 110,
+      price: 100,
       description: 'Das All-In-Paket enthält alle Extras – für maximale Ausstattung und stressfreies Event-Feeling zum Vorteilspreis.',
       items: [
         'Musikanlage',
@@ -112,7 +105,6 @@ export interface Produkt {
         'Sportbox',
         'Riesen-Jenga',
         'Dartscheibe',
-        'Lichter'
       ],
       services: [
         "Kompletter Aufbau aller Geräte",

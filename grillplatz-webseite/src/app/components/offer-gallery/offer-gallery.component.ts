@@ -53,16 +53,10 @@ export class OfferGalleryComponent implements AfterViewInit {
         price: 20
       },
       {
-        id: 'lichter',
-        title: 'Lichter',
-        imageUrl: this.baseHref + 'assets/lichter.jpg',
-        price: 20
-      },
-      {
         id: 'paket-sport',
         title: '🏀 Sportpaket',
         imageUrl: this.baseHref + 'assets/sport_paket.jpg',
-        price: 45,
+        price: 40,
         description: 'Enthält: Sportbox, Riesen-Jenga, Darts'
       },
       {
@@ -76,7 +70,7 @@ export class OfferGalleryComponent implements AfterViewInit {
         id: 'paket-allin',
         title: '🔥 All-In Paket',
         imageUrl: this.baseHref + 'assets/paket_allin.jpg',
-        price: 110,
+        price: 100,
         description: 'Alle verfügbaren Extras in einem Rundum-sorglos-Paket!'
       }
     ];
