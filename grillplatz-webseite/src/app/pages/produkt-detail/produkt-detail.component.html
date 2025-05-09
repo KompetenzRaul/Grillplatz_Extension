@@ -1,9 +1,25 @@
 <div class="detail-wrapper" *ngIf="produkt">
   <h2>{{ produkt.title }}</h2>
 
-  <div class="bild-galerie" *ngIf="produkt.imageUrls && produkt.imageUrls.length > 0">
-    <img *ngFor="let img of produkt.imageUrls" [src]="img" [alt]="produkt.title" />
-  </div>
+  <!-- Bild-Galerie mit Navigation -->
+<div class="bild-galerie-slider" *ngIf="produkt.imageUrls && produkt.imageUrls.length > 0; else einzelbild">
+  <button class="nav-button left" (click)="prevImage()">‹</button>
+
+  <img
+  [src]="produkt.imageUrls[currentImageIndex]"
+  [alt]="produkt.title"
+  class="slider-image"
+  [@zoomIn]="currentImageIndex"
+/>
+
+
+  <button class="nav-button right" (click)="nextImage()">›</button>
+</div>
+
+<ng-template #einzelbild>
+  <img [src]="produkt.imageUrl" [alt]="produkt.title" class="slider-image" />
+</ng-template>
+
 
   <div class="preis-block">{{ produkt.price }} €</div>
 
