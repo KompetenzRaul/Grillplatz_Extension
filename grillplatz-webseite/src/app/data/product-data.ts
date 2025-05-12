@@ -82,7 +82,7 @@ export interface Produkt {
     },
     {
       id: 'paket-party',
-      title: '🎉 party_paket',
+      title: '🎉 party-paket',
       imageUrl: 'assets/party_paket.png',
       imageUrls: ['assets/musikanlage.jpg', 'assets/laser.png'],
       price: 70,
