@@ -15,7 +15,7 @@ export interface Produkt {
       title: 'Musikanlage',
       imageUrl: 'assets/musikanlage.jpg',
       price: 60,
-      description: 'Diese Musikanlage bringt einen tollen Sound auf jede Veranstaltung. Diese kommt zusätztlich mit einem großen Subwoofer, der für einen satten Bass sorgt. Die Bedienung ist sehr einfach über das Handy mit Bluetooth oder über das AUX-Kabel. Die Musikanlage ist einzelnd buchbar oder als Kombination mit der Laser-Lichtanlage für einen sehr schöne Party-Atmosphäre für nur 70€.',
+      description: 'Diese Musikanlage bringt einen tollen Sound auf jede Veranstaltung. Diese kommt zusätztlich mit einem großen Subwoofer, der für einen satten Bass sorgt. Die Bedienung ist sehr einfach über das Handy mit Bluetooth oder über das AUX-Kabel. Die Musikanlage ist einzeln buchbar oder als Kombination mit der Laser-Lichtanlage für eine sehr schöne Party-Atmosphäre für nur 70€.',
       services: [
         "Aufbau der Anlage",
         "Einrichten der Verbindung zum Handy",
@@ -35,7 +35,7 @@ export interface Produkt {
         '2x Volleyball',
         '1x Wurfrakete',
         '1x Frisbee-Wurfring',
-        '1x Ballpumnpe',
+        '1x Ballpumpe',
         '1x Badmintonset (2x Schläger, 2x Federball)',
         '1x Wikinger-Schach',
       ]
@@ -60,7 +60,7 @@ export interface Produkt {
       title: 'Laser-Lichtanlage',
       imageUrl: 'assets/laser.png',
       price: 20,
-      description: 'Diese Laser-Lichtanlage sorgt für eine coole Party-Atmosphäre. Sie ist einfach zu bedienen und kann in verschiedenen Modi betrieben werden, z.B. im Musikmodus, wo die Lichter im Takt der Musik leuchten. Die Laser-Lichtanlage ist einzelnd buchbar oder zusammen mit der Musikanlage für nur 70€.',
+      description: 'Diese Laser-Lichtanlage sorgt für eine coole Party-Atmosphäre. Sie ist einfach zu bedienen und kann in verschiedenen Modi betrieben werden, z.B. im Musikmodus, wo die Lichter im Takt der Musik leuchten. Die Laser-Lichtanlage ist einzeln buchbar oder zusammen mit der Musikanlage für nur 70€.',
       services: [
         "Aufbau der Anlage",
         "Einrichten der Verbindung zuim Handy",
