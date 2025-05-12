@@ -63,7 +63,7 @@ export interface Produkt {
       description: 'Diese Laser-Lichtanlage sorgt für eine coole Party-Atmosphäre. Sie ist einfach zu bedienen und kann in verschiedenen Modi betrieben werden, z.B. im Musikmodus, wo die Lichter im Takt der Musik leuchten. Die Laser-Lichtanlage ist einzeln buchbar oder zusammen mit der Musikanlage für nur 70€.',
       services: [
         "Aufbau der Anlage",
-        "Einrichten der Verbindung zuim Handy",
+        "Einrichten der Verbindung zum Handy",
         "Einweisung in die Bedienung der Anlage",
       ]
     },
