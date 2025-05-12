@@ -30,7 +30,7 @@ export class OfferGalleryComponent implements AfterViewInit {
       {
         id: 'laser',
         title: 'Laser-Lichtanlage',
-        imageUrl:'assets/laser.jpg',
+        imageUrl:'assets/laser.png',
         price: 20
       },
       {
@@ -61,14 +61,14 @@ export class OfferGalleryComponent implements AfterViewInit {
       {
         id: 'paket-party',
         title: '🎉 Party-Paket',
-        imageUrl:'assets/party_paket.jpg',
+        imageUrl:'assets/party_paket.png',
         price: 70,
         description: 'Enthält: Musikanlage und Laser-Lichtanlage'
       },
       {
         id: 'paket-allin',
         title: '🔥 All-In Paket',
-        imageUrl:'assets/paket_allin.jpg',
+        imageUrl:'assets/paket_allin.png',
         price: 100,
         description: 'Alle verfügbaren Extras in einem Rundum-sorglos-Paket!'
       }

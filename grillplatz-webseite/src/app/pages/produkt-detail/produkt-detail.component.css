@@ -11,8 +11,11 @@
 
 .detail-wrapper img {
   width: 100%;
-  max-height: 400px;
-  object-fit: cover;
+  height: auto;
+  max-height: 600px;
+  object-fit: contain;
+  display: block;
+  overflow: hidden;
   border-radius: 12px;
   margin: 1rem 0;
 }
@@ -128,9 +131,12 @@
 
 .slider-image {
   width: 100%;
-  max-height: 400px;
-  object-fit: cover;
+  height: auto;
+  max-height: 600px;
+  object-fit: contain;
   border-radius: 12px;
+  overflow: hidden;
+  display: block;
   transition: opacity 0.3s ease-in-out;
 }
 

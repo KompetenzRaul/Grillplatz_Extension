@@ -26,7 +26,7 @@ export interface Produkt {
       id: 'sportbox',
       title: 'Sportbox',
       imageUrl: 'assets/sportbox.jpg',
-      imageUrls: ['assets/sportbox.jpg', 'assets/sportbox_2.jpg','assets/sportbox_3.jpg','assets/sportbox_4.jpg','assets/sportbox_5.jpg','assets/sportbox_6.jpg'],
+      imageUrls: ['assets/sportbox.jpg', 'assets/sportbox_2.jpg','assets/sportbox_3.jpg','assets/sportbox_4.jpg','assets/sportbox_5.jpg','assets/sportbox_6.jpg','assets/sportbox_7.jpg'],
       price: 20,
       description: 'Diese Sportbox enthält eine Vielzahl an Sportgeräten für viel Spiel und Spaß.',
       items: [
@@ -58,7 +58,7 @@ export interface Produkt {
     {
       id: 'laser',
       title: 'Laser-Lichtanlage',
-      imageUrl: 'assets/laser.jpg',
+      imageUrl: 'assets/laser.png',
       price: 20,
       description: 'Diese Laser-Lichtanlage sorgt für eine coole Party-Atmosphäre. Sie ist einfach zu bedienen und kann in verschiedenen Modi betrieben werden, z.B. im Musikmodus, wo die Lichter im Takt der Musik leuchten. Die Laser-Lichtanlage ist einzelnd buchbar oder zusammen mit der Musikanlage für nur 70€.',
       services: [
@@ -71,6 +71,7 @@ export interface Produkt {
       id: 'paket-sport',
       title: '🏀 Sportpaket',
       imageUrl: 'assets/sport_paket.jpg',
+      imageUrls: ['assets/dartscheibe.jpg', 'assets/riesen_jenga.jpg','assets/sportbox.jpg'],
       price: 40,
       description: 'Unser Sportpaket kombiniert Bewegung und Spaß für alle Altersgruppen. Ideal für Gruppen, Familien und Kindergeburtstage.',
       items: [
@@ -82,7 +83,8 @@ export interface Produkt {
     {
       id: 'paket-party',
       title: '🎉 party_paket',
-      imageUrl: 'assets/party_paket.jpg',
+      imageUrl: 'assets/party_paket.png',
+      imageUrls: ['assets/musikanlage.jpg', 'assets/laser.png'],
       price: 70,
       description: 'Partyfeeling garantiert – unser Party-Paket besteht aus der kraftvollen Musikanlage und der farbenfrohen Laser-Lichtanlage.',
       items: [
@@ -98,7 +100,8 @@ export interface Produkt {
     {
       id: 'paket-allin',
       title: '🔥 All-In Paket',
-      imageUrl: 'assets/paket_allin.jpg',
+      imageUrl: 'assets/paket_allin.png',
+      imageUrls: ['assets/musikanlage.jpg', 'assets/laser.png','assets/sportbox.jpg','assets/riesen_jenga.jpg','assets/dartscheibe.jpg'],
       price: 100,
       description: 'Das All-In-Paket enthält alle Extras – für maximale Ausstattung und stressfreies Event-Feeling zum Vorteilspreis.',
       items: [

@@ -1,2 +1,0 @@
-export default `:root{--primary-color: #e53935;--primary-hover: #c62828;--text-dark: #222;--background-light: #ffffff}body{font-family:Segoe UI,Arial,system-ui,sans-serif;background-color:#fff;color:#222}
-`;
